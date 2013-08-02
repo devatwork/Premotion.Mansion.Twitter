@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Premotion.Mansion.Twitter.Streaming.OAuthMessageHandler">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAEAAAAAAAgAAABAIAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Streaming\OAuthMessageHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Streaming.StatusesFilter">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAEAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Streaming\StatusesFilter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Streaming.TwitterHttpClient">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>Streaming\TwitterHttpClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Streaming.TwitterHttpClientConfiguration">
+    <Position X="0.5" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAIAAAAQAAQAAAAAAAAA=</HashCode>
+      <FileName>Streaming\TwitterHttpClientConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Streaming.TwitterStreamingConnection">
+    <Position X="7" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AgEAAAAAAABAQAAACAAACAAgAAEAAgCAAAAAAAAAAAA=</HashCode>
+      <FileName>Streaming\TwitterStreamingConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

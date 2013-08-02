@@ -86,6 +86,7 @@
   <ItemGroup>
     <None Include="Models\Models.cd" />
     <None Include="packages.config" />
+    <None Include="Streaming\Streaming.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

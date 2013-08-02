@@ -49,10 +49,39 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\BoundingBox.cs" />
+    <Compile Include="Models\Contributor.cs" />
+    <Compile Include="Models\Disconnect.cs" />
+    <Compile Include="Models\Entities.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\FriendList.cs" />
+    <Compile Include="Models\HashtagEntity.cs" />
+    <Compile Include="Models\LimitNotice.cs" />
+    <Compile Include="Models\LocationDeletionNotice.cs" />
+    <Compile Include="Models\MediaEntity.cs" />
+    <Compile Include="Models\MediaSize.cs" />
+    <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\Parsers\ParserFactory.cs" />
+    <Compile Include="Utils\DateTimeConverter.cs" />
+    <Compile Include="Models\Places.cs" />
+    <Compile Include="Models\Point.cs" />
+    <Compile Include="Models\Status.cs" />
+    <Compile Include="Models\StatusDeletionNotice.cs" />
+    <Compile Include="Models\StatusWithheld.cs" />
+    <Compile Include="Models\Tweet.cs" />
+    <Compile Include="Models\UrlEntity.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserMentionEntity.cs" />
+    <Compile Include="Models\UserWithheld.cs" />
+    <Compile Include="Models\Warning.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Models\Models.cd" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Streaming\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

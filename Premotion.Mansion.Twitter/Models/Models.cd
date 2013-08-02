@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Premotion.Mansion.Twitter.Models.BoundingBox">
+    <Position X="9" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\BoundingBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.Contributor">
+    <Position X="16" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Models\Contributor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.Disconnect">
+    <Position X="10.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAIAAAAoAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Disconnect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.Entities">
+    <Position X="20.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Models\Entities.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Hashtags" />
+      <Property Name="Media" />
+      <Property Name="Urls" />
+      <Property Name="UserMentions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.Event">
+    <Position X="22.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAgAAAAAQACAAACAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Event.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.FriendList">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\FriendList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.HashtagEntity">
+    <Position X="20.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Models\HashtagEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.LimitNotice">
+    <Position X="12.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\LimitNotice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.LocationDeletionNotice">
+    <Position X="19.75" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAACAAAgAAAAAAQAAAAAQAAAAAAA=</HashCode>
+      <FileName>Models\LocationDeletionNotice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.MediaEntity">
+    <Position X="14" Y="11" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAASAAAAAEAAAAwAAAAAAAAAAAAIEAAACQACAEACAAA=</HashCode>
+      <FileName>Models\MediaEntity.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Sizes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.MediaSize">
+    <Position X="14.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEEIAAA=</HashCode>
+      <FileName>Models\MediaSize.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.Message">
+    <Position X="13" Y="2" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="Premotion.Mansion.Twitter.Models.Message.ParserDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\Message.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Message.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.Places">
+    <Position X="12" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACACAAAAAAAAAIAAAAAAAAQQACIAAAAICAAAAAAAAAA=</HashCode>
+      <FileName>Models\Places.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BoundingBox" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.Point">
+    <Position X="11" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\Point.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.Status">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAgAAAAAAQAAAAAAAAACAAA=</HashCode>
+      <FileName>Models\Status.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.StatusDeletionNotice">
+    <Position X="2.75" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\StatusDeletionNotice.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Status" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.StatusWithheld">
+    <Position X="5.25" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAAAAAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\StatusWithheld.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.Tweet">
+    <Position X="14.75" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAjRBACAoAAACAAACCQAAEQ4EAAAAAABUGACCAKAAA=</HashCode>
+      <FileName>Models\Tweet.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Coordinates" />
+      <Property Name="Place" />
+      <Property Name="Entities" />
+      <Property Name="User" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Contributors" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.UrlEntity">
+    <Position X="17.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAgAAAAAAAAAAAAIAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\UrlEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.User">
+    <Position X="24.75" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>QAAqQAAEAAIgYAARGCsIAAQQIBAAKgEATQGgACBCUCA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Entities" />
+      <Property Name="Status" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.UserMentionEntity">
+    <Position X="20" Y="9.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAACQAAAAEAAAAAAAAAAAAAAAAAEAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Models\UserMentionEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.UserWithheld">
+    <Position X="7.75" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Models\UserWithheld.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Premotion.Mansion.Twitter.Models.Warning">
+    <Position X="17.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAACAAAgAAgAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Models\Warning.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

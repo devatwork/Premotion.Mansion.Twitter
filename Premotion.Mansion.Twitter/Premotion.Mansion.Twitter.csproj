@@ -47,6 +47,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\BoundingBox.cs" />
@@ -62,6 +63,11 @@
     <Compile Include="Models\MediaSize.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Parsers\ParserFactory.cs" />
+    <Compile Include="Streaming\OAuthMessageHandler.cs" />
+    <Compile Include="Streaming\StatusesFilter.cs" />
+    <Compile Include="Streaming\TwitterHttpClient.cs" />
+    <Compile Include="Streaming\TwitterHttpClientConfiguration.cs" />
+    <Compile Include="Streaming\TwitterStreamingConnection.cs" />
     <Compile Include="Utils\DateTimeConverter.cs" />
     <Compile Include="Models\Places.cs" />
     <Compile Include="Models\Point.cs" />
@@ -81,9 +87,7 @@
     <None Include="Models\Models.cd" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Streaming\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

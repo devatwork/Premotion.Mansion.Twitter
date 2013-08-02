@@ -33,7 +33,7 @@ namespace Premotion.Mansion.Twitter.Streaming
 
 			// use the gzip and deflate, https://dev.twitter.com/docs/streaming-apis/processing#gzip-compression
 			var httpClientHandler = new HttpClientHandler {
-				AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate,
+				AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate
 			};
 
 			// create the oauth message handler which generates a Auth header

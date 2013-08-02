@@ -86,6 +86,7 @@
   <ItemGroup>
     <None Include="Models\Models.cd" />
     <None Include="packages.config" />
+    <None Include="Premotion.Mansion.Twitter.nuspec" />
     <None Include="Streaming\Streaming.cd" />
   </ItemGroup>
   <ItemGroup />

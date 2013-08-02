@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+	  <licenseUrl>https://github.com/organizations/PremotionSoftwareSolutions/Premotion.Mansion.Twitter/licence.txt</licenseUrl>
+	  <projectUrl>https://github.com/organizations/PremotionSoftwareSolutions/Premotion.Mansion.Twitter/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+	 <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright (c) 2013 Bert Willems and contributors</copyright>
+    <tags>Tag1 Tag2</tags>
+  </metadata>
+</package>

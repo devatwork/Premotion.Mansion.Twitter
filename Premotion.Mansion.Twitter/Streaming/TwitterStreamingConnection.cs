@@ -92,6 +92,10 @@ namespace Premotion.Mansion.Twitter.Streaming
 			// read a json string from the text reader
 			var raw = reader.ReadLine();
 
+			// check if there is no token
+			if (string.IsNullOrEmpty(raw))
+				return null;
+
 			// parse the json into a token
 			var token = JObject.Parse(raw);
 

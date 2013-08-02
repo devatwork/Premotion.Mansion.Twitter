@@ -33,9 +33,9 @@ rem Package
 if %errorlevel% neq 0 goto failure
 
 rem Publish
-%nuget% push Premotion.Mansion.Twitter.0.0.1-alpha.nupkg -Source "https://www.myget.org/F/premotion/api/v2/package"
+%nuget% push Premotion.Mansion.Twitter.0.0.2-alpha.nupkg -Source "https://www.myget.org/F/premotion/api/v2/package"
 if %errorlevel% neq 0 goto failure
-%nuget% push Premotion.Mansion.Twitter.0.0.1-alpha.symbols.nupkg -Source "https://nuget.symbolsource.org/MyGet/premotion"
+%nuget% push Premotion.Mansion.Twitter.0.0.2-alpha.symbols.nupkg -Source "https://nuget.symbolsource.org/MyGet/premotion"
 if %errorlevel% neq 0 goto failure
 
 :success

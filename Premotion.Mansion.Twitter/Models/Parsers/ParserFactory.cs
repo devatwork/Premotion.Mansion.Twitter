@@ -13,18 +13,7 @@ namespace Premotion.Mansion.Twitter.Models.Parsers
 		/// <summary>
 		/// The json serializer used for deserialization.
 		/// </summary>
-		private static readonly JsonSerializer Serializer;
-		/// <summary>
-		/// Static constructor which creates the <see cref="Serializer"/>.
-		/// </summary>
-		static ParserFactory()
-		{
-			// create the serializer
-			Serializer = new JsonSerializer();
-
-			// register a custom date formatter
-			Serializer.Converters.Add(new DateTimeConverter());
-		}
+		private static readonly JsonSerializer Serializer = JsonSerializerFactory.Create();
 		/// <summary>
 		/// Creates a <see cref="Message.ParserDelegate"/> which filters on <paramref name="filter"/> and uses it's <see cref="JProperty.Value"/> to deserialze.
 		/// </summary>

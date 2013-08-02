@@ -42,8 +42,9 @@
     <Reference Include="OAuth">
       <HintPath>..\packages\OAuth.1.0.3\lib\net40\OAuth.dll</HintPath>
     </Reference>
-    <Reference Include="Premotion.Mansion.Http">
-      <HintPath>..\packages\Premotion.Mansion.Http.0.1.0\lib\net45\Premotion.Mansion.Http.dll</HintPath>
+    <Reference Include="Premotion.Mansion.Http, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Premotion.Mansion.Http.0.0.1-alpha\lib\net45\Premotion.Mansion.Http.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

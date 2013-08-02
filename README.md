@@ -1,6 +1,6 @@
-# Premotion.Mansion.Http
+# Premotion.Mansion.Twitter
 
-Provides primitives to build async HTTP clients in C#.
+Provides classes to connect to the Twitter streaming API.
 
 ## Copyright
 

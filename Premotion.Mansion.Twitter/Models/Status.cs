@@ -7,7 +7,6 @@ namespace Premotion.Mansion.Twitter.Models
 	/// </summary>
 	public class Status
 	{
-		#region Properties
 		/// <summary>
 		/// The ID of the status.
 		/// </summary>
@@ -28,6 +27,5 @@ namespace Premotion.Mansion.Twitter.Models
 		/// </summary>
 		[JsonProperty("user_id_str")]
 		public long UserIdStr { get; set; }
-		#endregion
 	}
 }

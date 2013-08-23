@@ -17,6 +17,10 @@ namespace Premotion.Mansion.Twitter.Streaming
 		/// Defines the key under which the request parameters are stored in <see cref="HttpRequestMessage.Properties"/>.
 		/// </summary>
 		public static readonly string OAuthParametersPropertyName = typeof (OAuthMessageHandler) + "OauthParameters";
+		private readonly string consumerKey;
+		private readonly string consumerSecret;
+		private readonly string requestToken;
+		private readonly string requestTokenSecret;
 		/// <summary>
 		/// Creates a new instance of the <see cref="OAuthMessageHandler"/> class with a specific inner handler.
 		/// </summary>
@@ -96,9 +100,5 @@ namespace Premotion.Mansion.Twitter.Streaming
 			// continue sending request
 			return base.SendAsync(request, cancellationToken);
 		}
-		private readonly string consumerKey;
-		private readonly string consumerSecret;
-		private readonly string requestToken;
-		private readonly string requestTokenSecret;
 	}
 }

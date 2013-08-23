@@ -20,6 +20,22 @@ namespace Premotion.Mansion.Twitter.Streaming
 	/// <see href="https://dev.twitter.com/docs/streaming-apis/connecting"/>
 	public class TwitterStreamingConnection : StreamingWebConnection<Message>
 	{
+		private readonly IEnumerable<Message.ParserDelegate> parsers = new[] {
+			StatusDeletionNotice.Parser,
+			LocationDeletionNotice.Parser,
+			LimitNotice.Parser,
+			StatusWithheld.Parser,
+			UserWithheld.Parser,
+			Disconnect.Parser,
+			Warning.Parser,
+			FriendList.Parser,
+			Event.Parser,
+			Tweet.Parser,
+			User.Parser
+		};
+		private readonly HttpExceptionHandler rateLimitExceptionHandler = new HttpExceptionHandler(new ExponentialBackoffStrategy(60000, int.MaxValue), new[] {422});
+		private readonly HttpExceptionHandler serviceUnavailableExceptionHandler = new HttpExceptionHandler(new ExponentialBackoffStrategy(5000, 19200), new[] {(int) HttpStatusCode.ServiceUnavailable});
+		private readonly SocketExceptionHandler socketExceptionHandler = new SocketExceptionHandler(new LinearTimeoutBackoffStrategy(250, 16000));
 		/// <summary>
 		/// Constructs a new stream configuration using the given <paramref name="configuration"/>.
 		/// </summary>
@@ -142,21 +158,5 @@ namespace Premotion.Mansion.Twitter.Streaming
 			rateLimitExceptionHandler.Dispose();
 			serviceUnavailableExceptionHandler.Dispose();
 		}
-		private readonly SocketExceptionHandler socketExceptionHandler = new SocketExceptionHandler(new LinearTimeoutBackoffStrategy(250, 16000));
-		private readonly HttpExceptionHandler rateLimitExceptionHandler = new HttpExceptionHandler(new ExponentialBackoffStrategy(60000, int.MaxValue), new[] {422});
-		private readonly HttpExceptionHandler serviceUnavailableExceptionHandler = new HttpExceptionHandler(new ExponentialBackoffStrategy(5000, 19200), new[] {(int) HttpStatusCode.ServiceUnavailable});
-		private readonly IEnumerable<Message.ParserDelegate> parsers = new[] {
-			StatusDeletionNotice.Parser,
-			LocationDeletionNotice.Parser,
-			LimitNotice.Parser,
-			StatusWithheld.Parser,
-			UserWithheld.Parser,
-			Disconnect.Parser,
-			Warning.Parser,
-			FriendList.Parser,
-			Event.Parser,
-			Tweet.Parser,
-			User.Parser
-		};
 	}
 }

@@ -1,7 +1,12 @@
 @echo Off
 set config=%1
 if "%config%" == "" (
-	set config=Release
+   set config=Release
+)
+
+set version=
+if not "%PackageVersion%" == "" (
+   set version=-Version %PackageVersion%
 )
 
 set nuget=
@@ -9,37 +14,31 @@ if "%nuget%" == "" (
     set nuget=.nuget\NuGet.exe
 )
 
-set apikey=
-if "%apikey%" == "" (
-    set apikey=%2
-)
+set nunit="packages\NUnit.Runners.2.6.2\tools\nunit-console.exe"
 
-rem Update self %nuget%
+echo Update self %nuget%
 %nuget% update -self
 if %errorlevel% neq 0 goto failure
 
-rem Set API key
-%nuget% setapikey %apikey% -Source "https://www.myget.org/F/premotion/api/v2/package"
-if %errorlevel% neq 0 goto failure
-%nuget% setapikey %apikey% -Source "https://nuget.symbolsource.org/MyGet/premotion"
+echo Restore packages
+%nuget% install ".nuget\packages.config" -OutputDirectory packages -NonInteractive
 if %errorlevel% neq 0 goto failure
 
-rem Build
-%WINDIR%\Microsoft.NET\Framework\v4.0.30319\msbuild Premotion.Mansion.Twitter.sln /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
+echo Build
+%WINDIR%\Microsoft.NET\Framework\v4.0.30319\msbuild Premotion.Mansion.Twitter.sln /t:Rebuild /p:Configuration="%config%" /m /v:M /fl /flp:LogFile=msbuild.log;Verbosity=Normal /nr:false
 if %errorlevel% neq 0 goto failure
 
-rem Package
-%nuget% pack Premotion.Mansion.Twitter\Premotion.Mansion.Twitter.csproj -sym -Prop Configuration=Release
+echo Unit tests
+%nunit% Premotion.Mansion.Twitter.Tests\bin\Premotion.Mansion.Twitter.Tests.dll /framework:net-4.5
 if %errorlevel% neq 0 goto failure
 
-rem Publish
-%nuget% push Premotion.Mansion.Twitter.0.0.2-alpha.nupkg -Source "https://www.myget.org/F/premotion/api/v2/package"
-if %errorlevel% neq 0 goto failure
-%nuget% push Premotion.Mansion.Twitter.0.0.2-alpha.symbols.nupkg -Source "https://nuget.symbolsource.org/MyGet/premotion"
+echo Package
+mkdir Build
+cmd /c %nuget% pack "Premotion.Mansion.Twitter\Premotion.Mansion.Twitter.csproj" -symbols -o Build -p Configuration=%config% %version%
 if %errorlevel% neq 0 goto failure
 
 :success
-echo success
+echo Success
 goto end
 
 :failure
